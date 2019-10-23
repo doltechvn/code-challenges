@@ -1,9 +1,25 @@
 # code-challenges
+Happy coding :)
 
-## Challenge 1 ##
+## Before you start ##
+- You do not need to complete all the challenges in a given time
+- Please complete a challenge with most detailed as you can
+- You can use the internet and your favor IDE
+- For Java challenges, we would love to see fully running code
+- For Design challenges, answer not limit to text, you can use diagrams to demonstrate your answer
+- There may have variants you would like to inquiry during the challenges, 
+but let assume that all the information you could have and try to provide solutions that take these variants into account.
+- **How to submit your answers:**
+  - Create a Git repo, and send us your repo link (prefer way)
+  - Or upload into a cloud drive and send us granted permission link 
+  - Or zip your solution and send via email (not prefer for big file size)
+  - Please help to note which challenges you has completed in the reply email 
+
+## Java Challenges ##
+### Challenge 1 ###
 Please write a Java method that receive the input as a list of `Integer` and return its sum by using **recursive**
 
-## Challenge 2 ##
+### Challenge 2 ###
 Given a list of `n` `Integer`, it is called Dol Flip if
 the list can be split into 2 parts, `[0, i]` and `[i, n-1]` that
 - Within a part, it is sorted either `ASC` or `DESC`
@@ -13,14 +29,20 @@ The `i` is call the Flip point.
 
 Samples:
 - Given the DolFlip list `[5, 7, 9, 3, 2]`, Flip point is `2`
-- Given the DolFlip list `[1, 3, 5, 8, 3]`, Flip point is `3`
+- Given the DolFlip list `[9, 7, 6, 5, 6]`, Flip point is `3`
 
-Write a Java method, input a Dol Flip list and return the Flip point. You can assume the list is always a Dol Flip list. What is the complexity of your method.
+Write a Java method, input a Dol Flip list and return the Flip point.
 
-## Challenge 3 ##
-We have a `Book` Entity with has 2 properties `name` and `author`, please design REST APIs specification for CRUD `Book` entity
+Please try to provide most optimal solution as you can.
 
-## Challenge 4 ##
+**Note:**
+- You can assume the list is always a Dol Flip list.
+- `n` range `[3, 2147483647]`
+
+### Challenge 3 ###
+We have a `Book` Entity with has 2 `String` properties `name` and `author`, please design **REST APIs specification** for CRUD `Book` entity
+
+### Challenge 4 ###
 Given this code snippets using JPA and Hibernate:
 ```
 @Entity
@@ -92,15 +114,61 @@ public enum AssignmentType {
 
 **Note**: You can use SQL native or JPQL syntax as what you prefer
 
-## Challenge 5 ##
+### Challenge 5 ###
 Given this mobile design:
 
 ![Alt text](resources/search-bar.png?raw=true "Search Bar")
 
 With JPA and Hibernate for PostgreSQL database. Let’s define entity models or database design diagrams to adapt this design
 
-## Challenge 6 ##
-As a food delivery company, we want to develop an application to help customer to place food or drink orders at food court by mobile or web application, then shipper will deliver them to our customer on time like Foody, Grab, Go-Viet are doing now. We also support online payment by 3rd-party e-wallet provider. 
+### Challenge 6 ###
+How can you detect **memory issue** of your Java application and how to solve it?
 
-Based on this requirement, we want to build a microservices ecosystem. Lets decompose application into backend services as much as you can that need to develop for this business flow. Please draw a diagram with service names and their responsibilities for easily understand
+## Design challenges ##
+Let assume we are about to develop an eLearning platform similar to Udemy but focusing on English learning, the platform has 3 primary groups of users:
+- End-user: who use the platform to learn new things
+- Tutor: who register as a tutor and prepare materials for online courses Or private lesson tutor.
+- Admin: who in-charge of system operations and daily admin tasks
 
+The product would require:
+- Support multiple platforms e.g. web, mobile and tablet
+- User does not require login to use some of the features like browsing courses, view preview materials, etc
+- User can login with Facebook, Google or register their own account
+- Payment will be integrate with 3rd party provider
+- All courses materials would be life-time access
+- Tutors will able to create their course, prepare material, and register free slot for private English lesson 
+- The course materials uploaded by Tutor will be reviewed by Admin before available to end users
+- Support VOD for courses and live streaming for private tutor lessons
+- Able to launch marketing campaign and allow discount if any
+- Strongly require UI consistency and provide best UX as much as possible
+- Primary audience will be in Vietnam
+- Admin and Tutor should able operate their daily tasks easily, only webapp is required for Admin and Tutor 
+- Support mobile push notification and SMS notification
+- Tracking user events for user recommendation and BI reports
+
+Notes:
+- Nice if the solution approach with microservices
+- For critical components please provide in detailed eg. which exactly service or framework is used
+- Traffic would be dramatically increase during sale
+- All below challenges share the same context but can be delivered independently
+
+### Challenge 6 ###
+Please provide high-level components diagram and deployment diagram for this system.
+
+*For critical components please provide in detailed*
+
+### Challenge 7 ###
+We would like to deliver new updates within every 2-weeks. New updates rollout should not cause any business interruption. 
+Some services could have shorter release period than others. 
+
+Please help to provide the solution to cover this requirement but still ensure quality between releases (in detailed).
+
+### Challenge 8 ###
+Assume we need to deliver a big feature which require 2-3 months development effort across services and teams. 
+During this period, small/medium features still be released as usual e.g. every 1-2 weeks. 
+Features would be functional related/impact to each others e.g. a small feature could impact and require business logic update on the big feature.
+
+Please give your advise how to deliver these features in plan which still ensure the quality of the product
+
+### Challenge 9 ###
+How would you deal with cybersecurity attacks in general and in specific to DDoS for this system?
